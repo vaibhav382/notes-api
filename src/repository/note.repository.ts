@@ -14,3 +14,7 @@ export const create = async (data: any) => {
 export const getAllNotes = async () => {
     return notes
 }
+
+export const getNote = async (id: string) => {
+    return notes.find(n => n.id === id)
+}

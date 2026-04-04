@@ -10,3 +10,7 @@ export const createNote = async (data: any) => {
 export const getAllNotes = async() => {
     return noteRepo.getAllNotes()
 }
+
+export const getNote = async (id: string) => {
+    return noteRepo.getNote(id)
+}
