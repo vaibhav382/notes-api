@@ -10,3 +10,7 @@ export const create = async (data: any) => {
     notes.push(newNote)
     return newNote
 }
+
+export const getAllNotes = async () => {
+    return notes
+}
