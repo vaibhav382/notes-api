@@ -16,5 +16,6 @@ export const getAllNotes = async () => {
 }
 
 export const getNote = async (id: string) => {
-    return notes.find(n => n.id === id)
+    const note = notes.find(n => n.id === id)
+    return note
 }
