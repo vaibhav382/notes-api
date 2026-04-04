@@ -1,4 +1,6 @@
-let notes: any[] = []
+import type { Note } from "../types/note.types.js"
+
+let notes: Note[] = []
 
 export const create = async (data: any) => {
     const newNote = {

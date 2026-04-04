@@ -10,7 +10,7 @@ export const createNote = async (req: Request, res: Response) => {
     return res.status(201).json(note)
 }
 
-export const getAllNotes = async (req: Request, res: Response) => {
+export const getAllNotes = async (_: Request, res: Response) => {
     const notes = await noteService.getAllNotes()
     return res.status(201).json(notes)
 }
