@@ -7,7 +7,7 @@ interface NoteParams {
 }
 
 export const createNote = async (req: Request, res: Response) => {
-    const note = await noteService.createNote(req.body)
+    const note = await noteService.createNote(req)
     return res.status(201).json(note)
 }
 
