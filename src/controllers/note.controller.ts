@@ -11,13 +11,13 @@ export const createNote = async (req: Request, res: Response) => {
     return res.status(201).json(note)
 }
 
-export const getAllNotes = async (req: Request<NoteParams>, res: Response) => {
-    const notes = await noteService.getAllNotes(req.params.id)
+export const getAllNotes = async (req: Request, res: Response) => {
+    const notes = await noteService.getAllNotes(req)
     return res.status(201).json(notes)
 }
 
-export const getNote = async (req: Request<NoteParams>, res: Response) => {
-    const note = await noteService.getNote(req.params.noteId)
+export const getNote = async (req: Request, res: Response) => {
+    const note = await noteService.getNote(req)
     if (!note) {
         return res.status(404).json({ message: "Note not found"})
     }

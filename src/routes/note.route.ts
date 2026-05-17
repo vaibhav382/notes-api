@@ -5,7 +5,7 @@ import { authMiddleware } from "../middleware/auth.middleware.js"
 const router = Router()
 
 router.post("/create", authMiddleware, createNote)
-router.get("/user/:id", getAllNotes)
-router.get("/:noteId", getNote)
+router.get("/allNotes", authMiddleware, getAllNotes)
+router.get("/note/:noteId", authMiddleware, getNote)
 
 export default router

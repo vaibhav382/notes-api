@@ -13,7 +13,8 @@ export const createNote = async (data: any) => {
 
 }
 
-export const getAllNotes = async(id: string) => {
+export const getAllNotes = async(data: any) => {
+    const id = data.payload.userId
     return await prisma.note.findMany({
         where: {
             userId: id
@@ -21,7 +22,8 @@ export const getAllNotes = async(id: string) => {
     })
 }
 
-export const getNote = async (noteId: string) => {
+export const getNote = async (data: any) => {
+    const noteId = data.params.noteId
     return await prisma.note.findUnique({
         where: {
             id: noteId
